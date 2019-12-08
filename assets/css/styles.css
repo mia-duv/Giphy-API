@@ -1,0 +1,16 @@
+.container {
+   text-align: center;
+}
+body {
+    background: url("gifbackimg.jpg");
+}
+h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 20px;
+    text-align: center;
+  }

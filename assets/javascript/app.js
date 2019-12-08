@@ -8,15 +8,20 @@ $("button").on("click", function() {
     url: queryURL,
     method: "GET"
   }).then(function(response) {
-    var results = response;
-    console.log(response.data);
-    var imageUrl = response.data.image_original_url;
+    $("#gifImage").empty()
+    for (var i = 0; i < response.data.length; i++) {
+    var gifList =$("<div>")
     var gifImage = $("<img>");
-    $("#gifImage").attr("src", imageUrl);
-    
+    gifImage.attr("src", response.data[i].images.fixed_height.url);
+    console.log(response);
+    gifList.prepend(gifImage)
+    $("#gifImage").prepend(gifList);
+    }
+
+ 
     });
     
-    
+
   });
 
    
